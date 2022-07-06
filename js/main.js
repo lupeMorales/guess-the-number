@@ -20,7 +20,6 @@ const random = getRandom();
 console.log(`random: ${random}`);
 
 //compruebo num introducido por usuaria y pinto en html los resultados de la comprobacion
-//*mejor pienso sería dividir funcion validar y funcion mostrar resultado de validacion en pantalla
 
 function validateNum(num) {
   const maxNum = 101;
