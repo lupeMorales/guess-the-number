@@ -10,7 +10,6 @@ let acc = 0;
 function showCount() {
   acc = acc + 1;
   count.innerHTML = `Números de intentos: ${acc}`;
-  console.log(`contador: ${acc}`);
 }
 //la funcion genera un random al cargar pagina y la guarda en la variable random
 function getRandom() {
@@ -29,16 +28,14 @@ function validateNum(num) {
   const maxNum = 101;
 
   num = parseInt(inputNumber.value);
-  debugger;
-  if (num >= maxNum) {
-    writeClue("El num debe estar entre 1 y 100");
-  } else if (isNaN(num)) {
-    writeClue("El número debe estar entre 1 y 100");
+
+  if (num >= maxNum || isNaN(num)) {
+    writeClue("Debes intruducir un número entre 1 y 100");
   } else if (num > random) {
     writeClue("Demasiado alto");
   } else if (num < random) {
     writeClue("Demasiado bajo");
-  } else if (num === random) {
+  } else {
     writeClue("Has ganado, campeona!!!");
   }
 }
