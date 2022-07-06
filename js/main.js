@@ -16,7 +16,7 @@ function showCount() {
 function getRandom() {
   return Math.ceil(Math.random() * 100);
 }
-const random = getRandom();
+let random = getRandom();
 console.log(`random: ${random}`);
 
 //pinto en html
@@ -36,7 +36,7 @@ function validateNum(num) {
   } else if (num < random) {
     writeClue("Demasiado bajo");
   } else {
-    writeClue("Has ganado, campeona!!!");
+    writeClue("¡¡¡Has ganado, campeona!!!");
   }
 }
 function resetCount() {
@@ -52,9 +52,12 @@ function handleClick(ev) {
   showCount();
   validateNum();
 }
-function handleClickReset(ev) {
+
+function handleClickReset() {
   resetCount();
   resetClue();
+  random = getRandom();
+  console.log(`random generado Reset: ${random}`);
 }
 //boton a la escucha
 button.addEventListener("click", handleClick);
