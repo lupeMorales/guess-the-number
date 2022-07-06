@@ -16,9 +16,20 @@ function getRandom() {
 }
 console.log(`random: ${getRandom()}`);
 
+function validateNum(num) {
+  num = inputNumber.value;
+  const random = getRandom();
+  if (num > random) {
+    console.log("es mayor");
+  } else if (num < random) {
+    console.log("es menos");
+  }
+}
+
 function handleClick(ev) {
   ev.preventDefault();
   showCount();
+  validateNum();
   console.log("click button");
 }
 
