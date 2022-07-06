@@ -3,6 +3,7 @@ const inputNumber = document.querySelector(".js-inputNum");
 const button = document.querySelector(".js-btn");
 const clue = document.querySelector(".js-clue");
 const count = document.querySelector(".js-count");
+const reset = document.querySelector(".js-reset");
 
 // creo un contador de intentos con la variable acc
 //la funcion showCount pinta ese contador en pantalla
@@ -18,12 +19,11 @@ function getRandom() {
 const random = getRandom();
 console.log(`random: ${random}`);
 
-//compruebo num introducido por usuaria y pinto en html los resultados de la comprobacion
-
+//pinto en html
 function writeClue(message) {
   clue.innerHTML = message;
 }
-
+//valida el numero introducido por usuaria
 function validateNum(num) {
   const maxNum = 101;
 
@@ -39,11 +39,23 @@ function validateNum(num) {
     writeClue("Has ganado, campeona!!!");
   }
 }
-// funcion manejadora del boton
+function resetCount() {
+  acc = 0;
+  count.innerHTML = `Números de intentos: ${acc}`;
+}
+function resetClue() {
+  clue.innerHTML = "Pista: Escribe el número y dale a Prueba";
+}
 function handleClick(ev) {
   ev.preventDefault();
   showCount();
   validateNum();
 }
+function handleClickReset(ev) {
+  /*  ev.preventDefault(); */
+  resetCount();
+  resetClue();
+}
 //boton a la escucha
 button.addEventListener("click", handleClick);
+reset.addEventListener("click", handleClickReset);

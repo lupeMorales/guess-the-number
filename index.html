@@ -8,21 +8,28 @@
     <title>Adivina el número</title>
   </head>
   <body>
-    <main class="container" >
+    <main class="container">
       <h1 class="title">adivina el número</h1>
       <form action="" class="form">
-        <label  class="label" for="number">introduce aquí tu número</label>
-        <input class="js-inputNum number" type="text" id="number" name="number" value=""/>
-
-            <input  class="js-btn button btn" type="submit" value="Prueba" />
-          </form>
+        <label class="label" for="number">introduce aquí tu número</label>
+        <input
+          class="js-inputNum number"
+          type="text"
+          placeholder="Introduce un número..."
+          id="number"
+          name="number"
+          value=""
+        />
+        <input class="js-btn btn" type="submit" value="Prueba" />
       </form>
+      <button class="js-reset reset" type="button">Reset</button>
 
       <div class="result">
-        <p class="clue js-clue">Pista: Escribe el número y dale a Prueba</p> </div>
-        <div class="result"> <p class="count js-count">Número de intentos: 0</p></div>
-       
-     
+        <p class="clue js-clue">Pista: Escribe el número y dale a Prueba</p>
+      </div>
+      <div class="result">
+        <p class="count js-count">Número de intentos: 0</p>
+      </div>
     </main>
     <script src="./js/main.js"></script>
   </body>

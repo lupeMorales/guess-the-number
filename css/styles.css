@@ -8,6 +8,7 @@
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  font-family: sans-serif;
 }
 .container {
   display: flex;
@@ -30,32 +31,40 @@
   text-transform: capitalize;
 }
 .number {
-  width: 150px;
+  width: 180px;
   height: 30px;
   background-color: var(--secondary-color);
   border-radius: 5px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--text-color);
+  padding-left: 10px;
 }
-.btn {
+.btn,
+.reset {
   width: 80px;
   height: 30px;
   background-color: var(--adalab-colot);
   border-radius: 5px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--text-color);
+}
+.reset {
+  position: relative;
+  bottom: 30px;
+  left: 100px;
+  background-color: var(--secondary-color);
 }
 .form {
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 15px;
 }
 .result {
-  height: 30px;
+  height: 35px;
   max-width: 500px;
   border: solid 2px var(--secondary-color);
   margin: 10px 0;
-  padding-left: 10px;
+  padding: 5px 0 0 10px;
 }
 .result p {
   font-size: 1.8rem;
