@@ -27,6 +27,8 @@
   height: 30px;
   background-color: var(--secondary-color);
   border-radius: 5px;
+  font-size: 1.8rem;
+  color: var(--text-color);
 }
 .btn {
   width: 80px;
