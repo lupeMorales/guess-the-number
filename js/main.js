@@ -21,26 +21,25 @@ console.log(`random: ${random}`);
 
 //compruebo num introducido por usuaria y pinto en html los resultados de la comprobacion
 
+function writeClue(message) {
+  clue.innerHTML = message;
+}
+
 function validateNum(num) {
   const maxNum = 101;
-  const valuesDefault = /^[0-9]+$/;
-  num = parseInt(inputNumber.value);
 
+  num = parseInt(inputNumber.value);
+  debugger;
   if (num >= maxNum) {
-    clue.innerHTML = "El número debe estar entre 1 y 100";
-    console.log("El num debe estar entre 1 y 100");
-  } else if ((num = valuesDefault)) {
-    clue.innerHTML = "El número debe estar entre 1 y 100";
-    console.log("El num debe estar entre 1 y 100");
+    writeClue("El num debe estar entre 1 y 100");
+  } else if (isNaN(num)) {
+    writeClue("El número debe estar entre 1 y 100");
   } else if (num > random) {
-    clue.innerHTML = "Demasiado alto";
-    console.log("es mayor");
+    writeClue("Demasiado alto");
   } else if (num < random) {
-    clue.innerHTML = "Demasiado bajo";
-    console.log("es menos");
+    writeClue("Demasiado bajo");
   } else if (num === random) {
-    clue.innerHTML = "Has ganado, campeona!!!";
-    console.log("Has ganado");
+    writeClue("Has ganado, campeona!!!");
   }
 }
 // funcion manejadora del boton
