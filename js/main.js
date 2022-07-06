@@ -18,6 +18,8 @@ function getRandom() {
 const random = getRandom();
 console.log(`random: ${random}`);
 function validateNum(num) {
+  const maxNum = 100;
+  const valuesDefault = /^[0-9]+$/;
   num = parseInt(inputNumber.value);
 
   if (num > random) {
@@ -28,10 +30,13 @@ function validateNum(num) {
     console.log("es menos");
   } else if (num === random) {
     clue.innerHTML = "Has ganado, campeona!!!";
-    console.log("es menos");
-  } else if (num > 100) {
+    console.log("Has ganado");
+  } else if (num > maxNum) {
     clue.innerHTML = "El número debe estar entre 1 y 100";
-    console.log("revisa num");
+    console.log("El num debe estar entre 1 y 100");
+  } else if ((num = valuesDefault)) {
+    clue.innerHTML = "El número debe estar entre 1 y 100";
+    console.log("El num debe estar entre 1 y 100");
   }
 }
 

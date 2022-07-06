@@ -18,9 +18,16 @@
   font-size: 3rem;
   color: var(--text-color);
 }
+.title::first-letter {
+  text-transform: capitalize;
+}
+
 .label {
   font-size: 2.4rem;
   color: var(--text-color);
+}
+.label::first-letter {
+  text-transform: capitalize;
 }
 .number {
   width: 150px;
