@@ -11,6 +11,11 @@ function showCount() {
   console.log(acc);
 }
 
+function getRandom() {
+  return Math.ceil(Math.random() * 100);
+}
+console.log(`random: ${getRandom()}`);
+
 function handleClick(ev) {
   ev.preventDefault();
   showCount();
