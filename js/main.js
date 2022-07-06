@@ -17,11 +17,13 @@ function getRandom() {
 console.log(`random: ${getRandom()}`);
 
 function validateNum(num) {
-  num = inputNumber.value;
+  num = parseInt(inputNumber.value);
   const random = getRandom();
   if (num > random) {
+    clue.innerHTML = "Demasiado alto";
     console.log("es mayor");
   } else if (num < random) {
+    clue.innerHTML = "Demasiado bajo";
     console.log("es menos");
   }
 }

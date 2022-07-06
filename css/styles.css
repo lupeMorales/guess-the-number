@@ -1,0 +1,53 @@
+:root {
+  --text-color: grey;
+  --secondary-color: rgb(230, 228, 228);
+  --adalab-colot: aquamarine;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.title {
+  font-size: 3rem;
+  color: var(--text-color);
+}
+.label {
+  font-size: 2.4rem;
+  color: var(--text-color);
+}
+.number {
+  width: 150px;
+  height: 30px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+.btn {
+  width: 80px;
+  height: 30px;
+  background-color: var(--adalab-colot);
+  border-radius: 5px;
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.result {
+  height: 30px;
+  max-width: 500px;
+  border: solid 2px var(--secondary-color);
+  margin: 10px 0;
+}
+.result p {
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
