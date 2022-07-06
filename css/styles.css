@@ -22,7 +22,11 @@
 .title::first-letter {
   text-transform: capitalize;
 }
-
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
 .label {
   font-size: 2.4rem;
   color: var(--text-color);
@@ -34,6 +38,7 @@
   width: 180px;
   height: 30px;
   background-color: var(--secondary-color);
+  border: none;
   border-radius: 5px;
   font-size: 1.5rem;
   color: var(--text-color);
@@ -44,6 +49,7 @@
   width: 80px;
   height: 30px;
   background-color: var(--adalab-colot);
+  border: none;
   border-radius: 5px;
   font-size: 1.5rem;
   color: var(--text-color);
@@ -55,19 +61,15 @@
   background-color: var(--secondary-color);
   margin-bottom: -25px;
 }
-.form {
-  display: flex;
-  flex-direction: column;
-  row-gap: 15px;
-}
+
 .result {
   height: 35px;
   max-width: 500px;
   border: solid 2px var(--secondary-color);
   margin: 10px 0;
-  padding: 5px 0 0 10px;
+  padding: 6px 0 0 10px;
 }
 .result p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--text-color);
 }
