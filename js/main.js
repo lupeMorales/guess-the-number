@@ -46,13 +46,13 @@ function resetCount() {
 function resetClue() {
   clue.innerHTML = "Pista: Escribe el número y dale a Prueba";
 }
+
 function handleClick(ev) {
   ev.preventDefault();
   showCount();
   validateNum();
 }
 function handleClickReset(ev) {
-  /*  ev.preventDefault(); */
   resetCount();
   resetClue();
 }
