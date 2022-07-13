@@ -59,6 +59,15 @@ function handleClickReset() {
   random = getRandom();
   console.log(`random generado Reset: ${random}`);
 }
+function pressEnter(ev) {
+  if (ev.keyCode === 13) {
+    ev.preventDefault();
+    showCount();
+    validateNum();
+    return false;
+  }
+}
 //boton a la escucha
 button.addEventListener("click", handleClick);
 reset.addEventListener("click", handleClickReset);
+inputNumber.addEventListener("keydown", pressEnter);
