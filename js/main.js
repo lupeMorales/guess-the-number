@@ -5,13 +5,6 @@ const clue = document.querySelector(".js-clue");
 const count = document.querySelector(".js-count");
 const reset = document.querySelector(".js-reset");
 
-// creo un contador de intentos con la variable acc
-//la funcion showCount pinta ese contador en pantalla
-let acc = 0;
-function showCount() {
-  acc = acc + 1;
-  count.innerHTML = `Números de intentos: ${acc}`;
-}
 //la funcion genera un random al cargar pagina y la guarda en la variable random
 function getRandom() {
   return Math.ceil(Math.random() * 100);
@@ -39,6 +32,18 @@ function validateNum(num) {
     writeClue("¡¡¡Has ganado, campeona!!!");
   }
 }
+
+// creo un contador de intentos con la variable acc
+//la funcion showCount pinta ese contador en pantalla
+let acc = 0;
+function showCount() {
+  acc = acc + 1;
+  count.innerHTML = `Números de intentos: ${acc}`;
+}
+function attempt() {
+  showCount();
+  validateNum();
+}
 function resetCount() {
   acc = 0;
   count.innerHTML = `Números de intentos: ${acc}`;
@@ -49,8 +54,7 @@ function resetClue() {
 
 function handleClick(ev) {
   ev.preventDefault();
-  showCount();
-  validateNum();
+  attempt();
 }
 
 function handleClickReset() {
@@ -62,8 +66,7 @@ function handleClickReset() {
 function pressEnter(ev) {
   if (ev.keyCode === 13) {
     ev.preventDefault();
-    showCount();
-    validateNum();
+    attempt();
     return false;
   }
 }
