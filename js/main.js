@@ -58,8 +58,11 @@ function resetClue() {
 function handleClick(ev) {
   ev.preventDefault();
   attempt();
+  setTimeout(resetInputNumber, 800);
 }
-
+function resetInputNumber() {
+  inputNumber.value = "";
+}
 function handleClickReset() {
   resetCount();
   resetClue();
