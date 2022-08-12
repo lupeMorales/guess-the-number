@@ -55,14 +55,23 @@ function resetClue() {
   clue.innerHTML = "Pista: Escribe el número y dale a Prueba";
 }
 
+function resetInputNumber() {
+  inputNumber.value = "";
+}
+
+function rotateCard() {
+  front.classList.toggle("rotate-front");
+  back.classList.toggle("rotate-back");
+}
+function renderSecretNum() {
+  secretNum.innerHTML = `${random}`;
+}
 function handleClick(ev) {
   ev.preventDefault();
   attempt();
   setTimeout(resetInputNumber, 800);
 }
-function resetInputNumber() {
-  inputNumber.value = "";
-}
+
 function handleClickReset() {
   resetCount();
   resetClue();
@@ -78,13 +87,6 @@ function pressEnter(ev) {
     attempt();
     return false;
   }
-}
-function rotateCard() {
-  front.classList.toggle("rotate-front");
-  back.classList.toggle("rotate-back");
-}
-function renderSecretNum() {
-  secretNum.innerHTML = `${random}`;
 }
 //boton a la escucha
 button.addEventListener("click", handleClick);
