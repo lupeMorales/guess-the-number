@@ -25,7 +25,7 @@ function validateNum(num) {
   num = parseInt(inputNumber.value);
 
   if (num >= maxNum || isNaN(num)) {
-    writeClue("Debes intruducir un número entre 1 y 100");
+    writeClue("Introduce un número entre 1 y 100");
   } else if (num > random) {
     writeClue("Demasiado alto");
   } else if (num < random) {

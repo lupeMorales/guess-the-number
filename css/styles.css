@@ -94,7 +94,7 @@
   transition: transform 1s;
 }
 .card-front {
-  background-color: purple;
+  background-color: aquamarine;
   transform: perspective(500px) rotateY(0deg);
 }
 .card-back {
@@ -108,7 +108,7 @@
   transform: perspective(500px) rotateY(360deg);
 }
 .secretNum {
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 700;
   background-color: transparent;
   text-align: center;
