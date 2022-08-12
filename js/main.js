@@ -69,7 +69,7 @@ function renderSecretNum() {
 function handleClick(ev) {
   ev.preventDefault();
   attempt();
-  setTimeout(resetInputNumber, 800);
+  setTimeout(resetInputNumber, 1000);
 }
 
 function handleClickReset() {
@@ -85,6 +85,7 @@ function pressEnter(ev) {
   if (ev.keyCode === 13) {
     ev.preventDefault();
     attempt();
+    setTimeout(resetInputNumber, 1000);
     return false;
   }
 }
