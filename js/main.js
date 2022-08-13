@@ -27,9 +27,9 @@ function validateNum(num) {
   if (num >= maxNum || isNaN(num)) {
     writeClue("Introduce un número entre 1 y 100");
   } else if (num > random) {
-    writeClue("Demasiado alto");
+    writeClue(`${num} es demasiado alto`);
   } else if (num < random) {
-    writeClue("Demasiado bajo");
+    writeClue(`${num} es demasiado bajo`);
   } else {
     writeClue("¡¡¡Has ganado, campeona!!!");
     rotateCard();
