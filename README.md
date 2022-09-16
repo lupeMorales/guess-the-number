@@ -1,5 +1,3 @@
-![Anime](https://github.com/Adalab/modulo-2-evaluacion-final-lupeMorales/blob/main/src/images/logo.png?raw=true)
-
 # GUESS THE SECRET NUMBER <span> | </span>  <a href="https://lupemorales.github.io/guess-the-number/" target="_blank">   Demo </a><span> | </span>
     
 ¿¿Adivinamos que número se esconde tras la carta??
@@ -12,12 +10,12 @@ Se trata de un proyecto responsive que permite ser utilizado en cualquier dispos
 
 ### Web responsive mobile:
 
-![Mobile](./src/images/mobile_view.png)
+![Mobile](https://github.com/lupeMorales/guess-the-number/blob/main/assets/mobile_view.png?raw=true)
 
 
 ### Web responsive desktop:
 
-![Desktop](./src/images/desktop_view.png)
+![Desktop](https://github.com/lupeMorales/guess-the-number/blob/main/assets/desktop-view.png?raw=true)
 
 
 
